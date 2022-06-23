@@ -43,22 +43,54 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3)/3;
-}
+// const calcAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3)/3;
+// }
 
-function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins > avgKoalas) {
-    console.log(`Dolphins wins (${avgDolphins} vs. ${avgKoalas})`)
-  } else {
-    console.log(`Koalas wins (${avgKoalas} vs. ${avgDolphins})`)
-  }
-}
+// function checkWinner(avgDolphins, avgKoalas) {
+//   if (avgDolphins > avgKoalas) {
+//     console.log(`Dolphins wins (${avgDolphins} vs. ${avgKoalas})`)
+//   } else {
+//     console.log(`Koalas wins (${avgKoalas} vs. ${avgDolphins})`)
+//   }
+// }
 
-const dolphinsAvg1 = calcAverage(44, 23, 71)
-const koalasAvg1 = calcAverage(65, 54, 49)
-const dolphinsAvg2 = calcAverage(85, 54, 41)
-const koalasAvg2 = calcAverage(23, 34, 27)
+// const dolphinsAvg1 = calcAverage(44, 23, 71)
+// const koalasAvg1 = calcAverage(65, 54, 49)
+// const dolphinsAvg2 = calcAverage(85, 54, 41)
+// const koalasAvg2 = calcAverage(23, 34, 27)
 
-checkWinner(dolphinsAvg1, koalasAvg1)
-checkWinner(dolphinsAvg2, koalasAvg2)
+// checkWinner(dolphinsAvg1, koalasAvg1)
+// checkWinner(dolphinsAvg2, koalasAvg2)
+
+////////////////////////////////
+// intro to ARRAYS: methods
+
+// push() method
+const friends = ['Michael', 'Steven', 'Peter'];
+const newLengthFriends = friends.push('Jay')
+console.log(friends)
+console.log(newLengthFriends) // returns 4
+
+// unshift() method
+const returnsSomething = friends.unshift('John')
+console.log(friends)
+console.log(returnsSomething) // returns 5
+
+// pop()
+const popped = friends.pop()
+console.log(popped) // returns 'Jay'
+console.log(friends)
+
+// shift()
+const shifted = friends.shift()
+console.log(shifted) // returns 'John'
+console.log(friends)
+
+// indexOf()
+console.log(friends.indexOf('Steven')) // returns: 1
+console.log(friends.indexOf('Gonzalo')) // returns: -1
+
+// includes()
+console.log(friends.includes('Gonzalo')) // returns: false
+console.log(friends.includes('Steven')) // returns: true
